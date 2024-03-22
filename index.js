@@ -12,6 +12,12 @@ const songs = [
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
     // Feel free to add even more songs
+    { title: "Shape of You", artist: "Ed Sheeran", genre: "Pop"},
+    { title: "Uptown Funk", artist: "Mark Ronson ft. Bruno Mars", genre: "Funk"},
+    { title: "Hotel California", artist: "Eagles", genre: "Rock"},
+    { title: "Bohemian Rhapsody", artist: "Queen", genre: "Rock"},
+    { title: "Rolling in the Deep", artist: "Adele", genre: "Pop"},
+    { title: 'Dancing in the Dark', artist: 'Bruce Springsteen', genre: 'Pop'},
 ];
 
 
@@ -30,7 +36,7 @@ function generatePlaylist(guardians, songs) {
     // Your code here
 
     
-   
+
 }
 
 // Call generatePlaylist and display the playlists for each Guardian
