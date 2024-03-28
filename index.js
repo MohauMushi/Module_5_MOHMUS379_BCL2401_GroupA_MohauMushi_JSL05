@@ -34,6 +34,11 @@ const guardians = {
 // Function to generate playlist based on preferred genre
 function generatePlaylist(guardians, songs) {
     // The map() function to create playlists for each Guardian
+    /*
+    The code below creates a guardianPlaylist by mapping through the guardians object, which contains guardian names and their genres.
+    For each guardian, it filters the songs array based on the genre, resulting in a playlist of songs specific to each guardian.
+    The code then returns the guardianPlaylist.
+     */
     let guardianPlaylist =  Object.entries(guardians).map(([guardian, genre]) => 
     ({ guardian,songs: songs.filter(song => song.genre === genre)}));
     return guardianPlaylist;
@@ -42,13 +47,16 @@ function generatePlaylist(guardians, songs) {
 // Call generatePlaylist and display the playlists for each Guardian
 let playlists =  generatePlaylist(guardians, songs);
 
+    // Display playlists
     let playlistsDiv = document.getElementById('playlists');
 
     playlists.forEach(playlist => {
 
+      // The below code utilizes destructuring assignment to extract the guardian and songs properties from the playlist object
       const { guardian, songs } = playlist;
   
       const playlistElement = document.createElement('div');
+      //Background playlist color
       playlistElement.classList.add('playlist');
 
       let guardianHeader = document.createElement("h2");
@@ -56,6 +64,13 @@ let playlists =  generatePlaylist(guardians, songs);
       playlistElement.appendChild(guardianHeader);
 
       
+      // The forEach() to loop through the songs array and add the songs to the correct playlist
+      /*
+      The provided code iterates through each song in the songs array and dynamically creates a div element for each song,
+      appending it to the playlistElement. Each div element contains the song's title and artist, which are created as span 
+      elements with appropriate classes and text content. This approach allows for the dynamic generation of a playlist interface
+      based on the songs array, enhancing the user experience by providing a visually appealing and interactive way to display and interact with the playlist.
+       */
       songs.forEach(song => {
         const songElement = document.createElement('div');
         songElement.classList.add('song');
@@ -71,5 +86,9 @@ let playlists =  generatePlaylist(guardians, songs);
 
         playlistElement.appendChild(songElement);
       });
+      /* 
+      The below code it appends the playlistElement to the playlistsDiv. This action effectively adds the playlist to the specified container,
+      allowing for the display and interaction with the playlist within the user interface.
+      */ 
       playlistsDiv.appendChild(playlistElement);
     });
