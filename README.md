@@ -20,6 +20,6 @@ When implementing code, a challenge I faced was ensuring the correct creation an
 
 
 ## 📚 What I learned
-To manipulate arrays and objects, use the `map()` function for data transformation, and dynamically update the DOM based on data and also the `filter()` function which filtered the songs according to the genre of each guardians preferences.
+To manipulate arrays and objects, use the `map()` function for data transformation, and dynamically update the DOM based on data and also the `filter()` function to filter and organise songs based on each Guardian's musical preference, displaying a playlist tailored just for them.
 
 
